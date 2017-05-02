@@ -14,7 +14,7 @@ public class Randomizer {
         Random randomGenerator = new Random();
         Cromosom[] queenPositions = new Cromosom[countCromosoms];
         for (int i = 0; i < countCromosoms ; i++){
-            System.out.print("Para "+i+ " ");
+//            System.out.print("Para "+i+ " ");
             ArrayList<Integer> positions = new ArrayList<Integer>();
             for (int j = 0; j < countQueens ; j++){
                 int position = randomGenerator.nextInt(TOTAL_POSITIONS - 1 );
@@ -22,7 +22,7 @@ public class Randomizer {
                     position = randomGenerator.nextInt(TOTAL_POSITIONS - 1 );
                 }
                 positions.add(position);
-                System.out.print(position+ ";");
+                //System.out.print(position+ ";");
             }
             queenPositions[i] = new Cromosom(TOTAL_POSITIONS, positions);
             positions.clear();

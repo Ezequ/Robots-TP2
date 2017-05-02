@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -15,6 +16,7 @@ public class GeneralAptitudeCalculator extends AptitudeCalculator {
     public float calculateAptitude(Cromosom cromosom) {
         int countCromosoms = 0;
         this.positions = cromosom.getPositions();
+        float totalCount = this.positions.size();
         // This for structure check if this queen is in jaque
         for (Integer position: positions){
             boolean isInJaque = hasOtherQueenInHorizontal(position) || hasOtherQueenInVertical(position);
@@ -22,7 +24,7 @@ public class GeneralAptitudeCalculator extends AptitudeCalculator {
                 countCromosoms++;
             }
         }
-        return (float) 1 / countCromosoms;
+        return (float) ((totalCount - countCromosoms) /  totalCount);
     }
     
     private boolean hasOtherQueenInHorizontal(int currentPosition){
