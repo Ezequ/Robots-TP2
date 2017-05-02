@@ -12,7 +12,9 @@ public class Main {
         Cromosom[] initialQueensList = Randomizer.getInitialCromosoms(queensCount,10);
         GeneralAptitudeCalculator gAC = new GeneralAptitudeCalculator();
         for (Cromosom c : initialQueensList){
-            gAC.calculateAptitude(c);
+            float aptitude = gAC.calculateAptitude(c);
+            c.setAptitude(aptitude);
         }
+        System.out.print("asdasd");
     }
 }

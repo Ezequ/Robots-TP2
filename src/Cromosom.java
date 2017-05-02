@@ -22,4 +22,8 @@ public class Cromosom {
 //            values[position] = 1;
 //        }
     }
+
+    public void setAptitude(float aptitude) {
+        this.aptitude = aptitude;
+    }
 }

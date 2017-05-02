@@ -22,7 +22,7 @@ public class GeneralAptitudeCalculator extends AptitudeCalculator {
                 countCromosoms++;
             }
         }
-        return countCromosoms / SIZE_BOARD;
+        return (float) 1 / countCromosoms;
     }
     
     private boolean hasOtherQueenInHorizontal(int currentPosition){
